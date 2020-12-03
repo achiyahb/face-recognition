@@ -1,5 +1,9 @@
-.logOut{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 1rem;
+.Tilt{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(89deg, #ff5edf 0%, #04C8de 100%);
+}
+
+#brain{
+    padding-top: 1rem;
 }
