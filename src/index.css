@@ -13,6 +13,6 @@ code {
     monospace;
 }
 
-button{
+button .pointer{
   cursor: pointer;
 }
