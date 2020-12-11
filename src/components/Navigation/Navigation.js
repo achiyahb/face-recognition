@@ -3,7 +3,6 @@ import './Navigation.css'
 
 const Navigation = ({onRouteChange,route}) => {
     if (route==='home'){
-        console.log('pos')
         return (
             <nav className={'logOut'}>
                 <p
@@ -13,7 +12,6 @@ const Navigation = ({onRouteChange,route}) => {
             </nav>
         )
     } else {
-        console.log('nag')
         return (
             <nav className={'logOut'}>
                 <p
