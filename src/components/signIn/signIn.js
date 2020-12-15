@@ -1,5 +1,5 @@
 import React from "react";
-import signInCheck from '../../middlware/signInMethod'
+import signInCheck from '../../smartBrainApi/signInMethod'
 
 const signIn = ({onRouteChange}) => {
     const onPressSubmit = ()=>{

@@ -1,6 +1,14 @@
 import React from "react";
+import setRegister from "../../smartBrainApi/registerMethod";
 
 const Register = ({onRouteChange}) => {
+    const onPressSubmit = ()=>{
+        let password = document.getElementById('password').value
+        let email = document.getElementById('email-address').value
+        let name = document.getElementById('name').value
+        setRegister(password,email,name,onRouteChange)
+    }
+
     return (
         <article className="br3 ba  b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <main className="pa4 black-80">
@@ -11,7 +19,7 @@ const Register = ({onRouteChange}) => {
                             <label className="db fw6 lh-copy f6" htmlFor="user-name">Your Name</label>
                             <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                                    type="email"
-                                   name="email-address" id="email-address"/>
+                                   name="email-address" id="name"/>
                         </div>
                         <div className="mt3">
                             <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
@@ -28,7 +36,7 @@ const Register = ({onRouteChange}) => {
                     </fieldset>
                     <div className="">
                         <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
-                               onClick={() => onRouteChange('home')}
+                               onClick={() => onPressSubmit()}
                                type="submit"
                                value="Register"/>
                     </div>
