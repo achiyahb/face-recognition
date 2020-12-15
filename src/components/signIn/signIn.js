@@ -1,6 +1,14 @@
 import React from "react";
+import signInCheck from '../../middlware/signInMethod'
 
 const signIn = ({onRouteChange}) => {
+    const onPressSubmit = ()=>{
+        let password = document.getElementById('password').value
+        let email = document.getElementById('email-address').value
+        signInCheck(password,email,onRouteChange)
+    }
+
+
     return (
         <article className="br3 ba  b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <main className="pa4 black-80">
@@ -22,7 +30,12 @@ const signIn = ({onRouteChange}) => {
                     </fieldset>
                     <div className="">
                         <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
-                               onClick={() => onRouteChange('home')}
+                               onClick={
+
+                                   () =>{
+                                       onPressSubmit()
+                                   }
+                               }
                                type="submit"
                                value="Sign in"/>
                     </div>
